@@ -9,17 +9,18 @@ class SocialLoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell( // button
+    return InkWell(
       onTap: onTap,
       child: Container(
         height: 56,
         decoration: BoxDecoration(
-          color: AppColors.shape,
-          borderRadius: BorderRadius.circular(5),
-          border: Border.fromBorderSide(BorderSide(
-            color: AppColors.stroke,
-          )),
-        ),
+            color: AppColors.shape,
+            borderRadius: BorderRadius.circular(5),
+            border: Border.fromBorderSide(
+              BorderSide(
+                color: AppColors.stroke,
+              ),
+            )),
         child: Row(
           children: [
             Expanded(
@@ -28,10 +29,14 @@ class SocialLoginButton extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(AppImages.google),
-                    SizedBox(
+                    const SizedBox(
                       width: 16,
                     ),
-                    Container(height: 56, width: 1, color: AppColors.stroke),
+                    Container(
+                      height: 56,
+                      width: 1,
+                      color: AppColors.stroke,
+                    )
                   ],
                 )),
             Expanded(
@@ -40,13 +45,12 @@ class SocialLoginButton extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Entrar com o Google',
+                    "Entrar com Google",
                     style: TextStyles.buttonGray,
                   ),
                 ],
               ),
             ),
-            Expanded(child: Container()),
           ],
         ),
       ),
